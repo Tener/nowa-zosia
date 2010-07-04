@@ -35,13 +35,13 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
 
-    respond_to do |format|
+    
       if @post.update_attributes(params[:post])
         redirect_to(posts_path, :notice => 'Post usunięty')
       else
         render :action => "edit"        
       end
-    end
+    
   end
 
   # DELETE /posts/1
@@ -50,9 +50,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
 
-    respond_to do |format|
       format.html { redirect_to(posts_url) }
-      format.xml  { head :ok }
-    end
+
   end
 end
