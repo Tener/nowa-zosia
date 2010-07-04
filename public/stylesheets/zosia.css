@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+#wrapper {
+    background: url("../images/cloud.png") repeat-x bottom left fixed; 
+    position: absolute;
+    width: 100%;
+    min-height:100%;
+    height:auto !important;
+    height:100%;
+}
+
+/*
+#page_margins {
+    opacity:0.9;
+}
+*/
+
+/**
+ * footer
+ */
+#footer {
+    font-size: 0.8em;
+    text-align: center;
+}
+/**
+ * css changes related to zosia only
+ * this generaly should be kept separately for purpose
+ * of merging future versions of yaml
+ */
+
+/**
+ * blog posts related:
+ */
+.blog_post { margin: 0.5em 5em 2em 1em; }
+.bp_author {
+    color: #999;
+    margin-left: 1em;
+}
+.bp_date {
+    color: #999;
+    margin-left: 1em;
+}
+
+/**
+ * messages in lectures app
+ */
+.messages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/**
+ * meh, if firefox didnt break list-style css by misplacing list-style-image
+ * it would be far much easier :/
+ */
+.messages > * {
+    background-color: #ffc;
+    background-image: url('/static_media/images/face-smile-24.png');
+    background-repeat: no-repeat;
+    background-position: 0.2em 0.2em;
+    height: 2em;
+    border: 1px solid #eeb;
+    padding: 0.2em 0 0 2.5em;
+    margin: 0 0 0.3em 0;
+}
+
+/**
+ * error messages in chane prefs // same apply
+ */
+.error_messages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.error_messages > * {
+    background-color: #ffbcb2;
+    background-image: url('/static_media/images/process-stop-24.png');
+    background-repeat: no-repeat;
+    background-position: 0.2em 0.2em;
+    height: 2em;
+    border: 1px solid red;
+    padding: 0.2em 0 0 2.5em;
+    margin: 0 0 0.3em 0;
+}
+
+.main_page_password_reset {
+  margin: 6px;
+}
+
+
+
+/**
+ * following are used in forms; it was formerly inside css template block
+ */
+
+fieldset { border: 0; }
+fieldset legend { 
+    font-weight: 600;
+    padding: 0.2em;
+}
+fieldset ol { padding: 0; }
+fieldset ol li {
+    list-style: none;
+    padding: 0.1em;
+}
+fieldset label {
+    vertical-align: top;
+    display: inline-block;
+    width: 15em;
+}
+comment {
+    font-style: italic;
+    font-size: 0.8em;
+    color: #E34234;
+}
+label span {
+    font-style: italic;
+    font-size: 0.8em;
+}
+.cennik {
+    font-weight: 600;
+}
+ul.errorlist {
+   margin: 0;
+   padding: 0;
+}
+.errorlist li {
+    margin: 0;
+    text-align: center;
+    border: 1px solid red;
+    font-size: 0.9em;
+    color: #E34234;
+    /* background-color: #FFD7D7; */
+    display: block;
+    width: 16em;
+}
+label.for_hidden {
+    width: 15em;
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+label.for_hidden span {
+    font-size: 0.7em;
+}
+.hidden { display: none; }
+
+/**
+ * logo
+ */
+#header {
+    height: 4em;
+}
+#header img {
+    position: absolute;
+    top: 0;
+}
+#header span {
+    position: relative;
+    top: 3em;
+    left: 0.5em;
+}
+
+/**
+ * login form / links on top of the page
+ */
+#login_form fieldset {}
+#login_form label {
+    width: auto;
+    font-size: 1em;
+    margin: auto;
+    vertical-align: middle;
+    margin-bottom: 1pt;
+    margin-left: 1em;
+}
+#login_form input {}
+
+/**
+ * fixes
+ */
+
+#register_auth li, #register_personal li
+{
+	height: 2em;
+}
+

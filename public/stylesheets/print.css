@@ -1,0 +1,4 @@
+@media print {
+.odd {}
+.even { background-color: red; }
+}
