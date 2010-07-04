@@ -4,10 +4,6 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @posts }
-    end
   end
 
   # GET /posts/new
@@ -15,10 +11,6 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @post }
-    end
   end
 
   # GET /posts/1/edit
@@ -31,15 +23,11 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(params[:post])
 
-    respond_to do |format|
       if @post.save
-        format.html { redirect_to(@post, :notice => 'Post was successfully created.') }
-        format.xml  { render :xml => @post, :status => :created, :location => @post }
+        redirect_to posts_path, :notice => 'Post dodany pomyślnie.'
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
+        render :action => "new"
       end
-    end
   end
 
   # PUT /posts/1
@@ -49,11 +37,9 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.update_attributes(params[:post])
-        format.html { redirect_to(@post, :notice => 'Post was successfully updated.') }
-        format.xml  { head :ok }
+        redirect_to(posts_path, :notice => 'Post usunięty')
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
+        render :action => "edit"        
       end
     end
   end

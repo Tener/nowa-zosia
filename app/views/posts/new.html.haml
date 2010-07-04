@@ -1,12 +1,12 @@
 %h1 Nowa notka
-- form_for(@post) do |f|
+- form_for(@post, :url => {:controller => :posts, :action => :create}) do |f|
   = f.error_messages
   %p
-    = f.label "nagłówek"
+    = f.label :title, "Nagłówek"
     %br
     = f.text_field :title
   %p
-    = f.label :treść
+    = f.label :content, "Treść"
     %br
     = f.text_area :content
   %p
