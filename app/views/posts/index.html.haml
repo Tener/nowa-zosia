@@ -1,0 +1,10 @@
+- @posts.each do |post|
+  %h2= h post.title
+  %span.bp_date
+    %em
+      = h post.created_at.to_s
+  .blog_post= post.content
+  %div
+    %span= link_to 'Edytuj', edit_post_path(post)
+    %span= link_to 'Usuń', post, :confirm => 'Jesteś pewny?', :method => :delete
+= link_to 'Nowy post', new_post_path

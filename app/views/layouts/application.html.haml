@@ -1,0 +1,126 @@
+!!!
+%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %title ZOSIA
+    %meta{:content => "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{:content => "pl", "http-equiv" => "Content-Language"}/
+    /[if lte IE 7]
+      <link href="/static_media/css/patches/patch_2col_right_13.css" rel="stylesheet" type="text/css" />
+    = stylesheet_link_tag :all
+  %body{:onload => ""}
+    #wrapper
+      #page_margins
+        #page
+          #header
+            #topnav
+              %form#login_form{:action => "/login/", :method => "post"}
+                %fieldset
+                  %label{:for => "id_login_email"} e-mail
+                  %input#id_email{:name => "email", :type => "text"}/
+                  %label{:for => "id_login_password"} hasło
+                  %input#id_password{:name => "password", :type => "password"}/
+                  %input{:type => "submit", :value => "login"}/
+              .main_page_password_reset
+                %a{:href => "/password_reset"} zapomniałem hasła
+            %a{:href => "/blog/"}
+              %img{:alt => "ZOSIA", :src => "/images/logo_zosi_shadow.png"}/
+            %span Zimowy Obóz Studentów Informatyki A • Pokrzywna 2010
+          / begin: main navigation #nav
+          #nav
+            %a#navigation{:name => "navigation"}
+            / skiplink anchor: navigation
+            #nav_main
+              %ul
+                %li#current
+                  %a{:href => "/blog/"} Blog
+                %li
+                  %a{:href => "/lectures/"} Wykłady
+          / end: main navigation
+          / begin: main content area #main
+          #main
+            / begin: #col1 - first float column
+            #col1
+              #col1_content.clearfix
+                / skiplink anchor: Content
+                = yield
+                %p{:style => "color: green"}= notice
+            / end: #col1
+            / begin: #col3 static column
+            #col3
+              #col3_content.clearfix
+                %h2 Informacje:
+                %h4 Miejsce
+                %p
+                  %a{:href => "http://www.hotel-chrobry.pl/pl/"} Kompleks hotelowy Chrobry
+                  w
+                  %a{:href => "http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=48-267+Pokrzywna,+Poland&sll=50.256864,17.697601&sspn=0.582116,1.41861&ie=UTF8&hq=&hnear=Pokrzywna,+Nysa+County,+Opole,+Poland&ll=50.283745,17.453327&spn=0.072724,0.242729&z=13&lci=com.panoramio.all,org.wikipedia.en"} Pokrzywnej
+                  (
+                  %a{:href => "http://pl.wikipedia.org/wiki/G\303\263ry_Opawskie"}> Góry&nbsp;Opawskie
+                  )
+                %p
+                  %h4 Planowane terminy
+                %ul{:style => "margin-left:0.2em"}
+                  %li
+                    zapisy i wpłaty
+                    %br>/
+                    do 21 lutego 2010, 23:59
+                  %li
+                    zgłaszanie wykładów
+                    %br>/
+                    do 1 marca 2010, 23:59
+                  %li
+                    zapisy na pokoje
+                    %br>/
+                    od 27 lutego 2010, 20:00
+                  %li
+                    wyjazd
+                    %br>/
+                    4 marca 2010
+                  %li
+                    powrót
+                    %br>/
+                    7 marca 2010
+                %h4 Kontakt
+                %p
+                  %a{:href => "mailto:ksi@cs.uni.wroc.pl"} ksi@cs.uni.wroc.pl
+                %p
+                  %a{:href => "http://www.ii.uni.wroc.pl/cms/pl/main_page"}
+                    %img{:alt => "Instytut Informatyki UWr", :src => "/images/ii1.png", :title => "Instytut Informatyki UWr"}/
+                  %a{:href => "http://sites.google.com/a/cs.uni.wroc.pl/ksi/"}
+                    %img{:alt => "Ko\305\202o Student\303\263w Informatyki", :src => "/images/ksi1.png", :title => "Ko\305\202o Student\303\263w Informatyki UWr"}/
+                %br/
+                %h4 Patronat
+                %p
+                  %ul
+                    %li
+                      %a{:href => "http://www.wmi.uni.wroc.pl/"} Wydział Matematyki i Informatyki Uniwersytetu Wrocławskiego
+                    %li
+                      %a{:href => "http://www.uni.wroc.pl/"} JM. Rektor Uniwersytetu Wrocławskiego
+                %h4 Sponsorzy
+                %p
+                  .sponsor_logo
+                    %a{:href => "http://sprezentuj.pl"}
+                      %img{:alt => "Sprezentuj.pl", :src => "/images/logo_sprezentuj.pl_175x120.png", :title => "Sprezentuj.pl"}/
+                  .sponsor_logo
+                    %a{:href => "http://nasza-klasa.pl"}
+                      %img{:alt => "Nasza Klasa - miejsce spotka\305\204", :src => "/images/logo_naszaklasa_175x88px.png", :title => "Nasza Klasa - miejsce spotka\305\204"}/
+              #ie_clearing &nbsp;
+              / End: IE Column Clearing
+            / end: #col3
+          / end: #main
+          / begin: #footer
+          #footer
+            %a{:href => "http://creativecommons.org/licenses/by/2.5/pl/", :rel => "license"}>
+              %img{:alt => "Creative Commons License", :src => "/images/88x31.png", :style => "border-width:0; margin: 0.2em 0.4em 0 0; float:left;"}/
+            O ile nie stwierdzono inaczej, wszystkie materiały na stronie są dostępne na licencji
+            = succeed "." do
+              %a{:href => "http://creativecommons.org/licenses/by/2.5/pl/", :rel => "license"} Creative Commons Attribution 2.5 Poland
+            %br/
+            copyleft Arek Flinik |
+            %a{:href => "http://github.com/dreamer/zapisy_zosia"} src
+            | Layout oparty na
+            = succeed "," do
+              %a{:href => "http://www.yaml.de/"} YAML
+            autorzy: Patryk Obara, Rafał Kuliński
+          / end: #footer
+    / wrapper
