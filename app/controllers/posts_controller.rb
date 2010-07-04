@@ -24,7 +24,7 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post])
 
       if @post.save
-        redirect_to posts_path, :notice => 'Post dodany pomyślnie.'
+        redirect_to posts_path, :notice => t(:post_added)
       else
         render :action => "new"
       end
@@ -37,7 +37,7 @@ class PostsController < ApplicationController
 
     
       if @post.update_attributes(params[:post])
-        redirect_to(posts_path, :notice => 'Post usunięty')
+        redirect_to(posts_path, :notice => t(:post_updated))
       else
         render :action => "edit"        
       end

@@ -1,0 +1,15 @@
+pl:
+  hello: "Hello świecie"
+  post_added: "Wpis dodany pomyślnie."
+  post_updated: "Wpis uaktualniony pomyślnie."
+  back: "Wróć"
+  create: "Utwórz"
+  save: "Zapisz"
+  title: "Nagłówek"
+  content: "Treść"
+  new_post: "Nowy wpis"
+  edit_post: "Edytuj wpis"
+  edit: "Edytuj"
+  delete: "Usuń"
+  are_you_sure: "Jesteś pewny?"
+  

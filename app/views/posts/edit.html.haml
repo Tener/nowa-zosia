@@ -1,14 +1,14 @@
-%h1 Edycja notki
+%h1= t(:edit_post)
 - form_for(@post, :url => {:controller => :posts, :action => :update}) do |f|
   = f.error_messages
   %p
-    = f.label :title, "Nagłówek"
+    = f.label :title, t(:title)
     %br
     = f.text_field :title
   %p
-    = f.label :content, "Treść"
+    = f.label :content, t(:content)
     %br
     = f.text_area :content
   %p
-    = f.submit 'Zapisz'
-= link_to 'Wróć', posts_path
+    = f.submit t(:save)
+= link_to t(:back), posts_path
