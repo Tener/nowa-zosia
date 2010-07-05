@@ -35,6 +35,8 @@
                   %a{:href => "/blog/"} Blog
                 %li
                   %a{:href => "/lectures/"} Wykłady
+                %li
+                  %a{:style => "color: green"}= notice
           / end: main navigation
           / begin: main content area #main
           #main
@@ -43,7 +45,6 @@
               #col1_content.clearfix
                 / skiplink anchor: Content
                 = yield
-                %p{:style => "color: green"}= notice
             / end: #col1
             / begin: #col3 static column
             #col3

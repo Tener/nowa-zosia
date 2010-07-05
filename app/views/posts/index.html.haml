@@ -3,8 +3,9 @@
   %span.bp_date
     %em
       = h post.created_at.to_s
-  .blog_post= post.content
-  %div
+  .blog_post
+    %p= post.content
     %span= link_to t(:edit), edit_post_path(post)
     %span= link_to t(:delete), post, :confirm => t(:are_you_sure), :method => :delete
+    %br
 = link_to t(:new_post), new_post_path
