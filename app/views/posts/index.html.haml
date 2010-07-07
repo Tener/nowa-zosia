@@ -4,7 +4,8 @@
     %em
       = h post.created_at.to_s
   .blog_post
-    %p= post.content
+    :escaped
+       %p= post.content
     %span= link_to t(:edit), edit_post_path(post)
     %span= link_to t(:delete), post, :confirm => t(:are_you_sure), :method => :delete
     %br
