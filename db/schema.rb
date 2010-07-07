@@ -9,11 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100704201131) do
+ActiveRecord::Schema.define(:version => 20100707230110) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sponsors", :force => true do |t|
+    t.string   "name"
+    t.string   "image"
+    t.string   "url"
+    t.boolean  "visible"
+    t.text     "info"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

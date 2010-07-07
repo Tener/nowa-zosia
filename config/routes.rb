@@ -1,4 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
+
+  map.namespace :admin do |admin|
+    admin.resources :sponsors
+  end
+    
+
+
   map.resources :posts, :except => [:show, :index]
   map.root :controller => :posts, :action => :index
   map.posts "/blog", :controller => :posts, :action => :index
