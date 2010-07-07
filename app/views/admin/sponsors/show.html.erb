@@ -1,0 +1,28 @@
+<p>
+  <b>Name:</b>
+  <%=h @sponsor.name %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%=h @sponsor.image %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @sponsor.url %>
+</p>
+
+<p>
+  <b>Visible:</b>
+  <%=h @sponsor.visible %>
+</p>
+
+<p>
+  <b>Info:</b>
+  <%=h @sponsor.info %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_sponsor_path(@sponsor) %> |
+<%= link_to 'Back', admin_sponsors_path %>
