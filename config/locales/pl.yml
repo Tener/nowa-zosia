@@ -13,4 +13,10 @@ pl:
   edit: "Edytuj"
   delete: "Usuń"
   are_you_sure: "Jesteś pewny?"
-  
+  name: "Nazwa"
+  image: "Obrazek"
+  url: "Adres URL"
+  visible: "Widoczny?"
+  info: "Informacje"
+  yes: "Tak"
+  no: "Nie"
