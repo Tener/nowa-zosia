@@ -1,31 +1,35 @@
-<h1>New sponsor</h1>
+%h1 New sponsor
 
-<% form_for([:admin, @sponsor]) do |f| %>
-  <%= f.error_messages %>
+- form_for([:admin, @sponsor]) do |f|
+  = f.error_messages
 
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :image %><br />
-    <%= f.text_field :image %>
-  </p>
-  <p>
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
-  </p>
-  <p>
-    <%= f.label :visible %><br />
-    <%= f.text_field :visible %>
-  </p>
-  <p>
-    <%= f.label :info %><br />
-    <%= f.text_area :info %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
+  %p
+    = f.label :name 
+    %br 
+    = f.text_field :name 
+  
+  %p
+    = f.label :image 
+    %br 
+    = f.text_field :image 
+  
+  %p
+    = f.label :url 
+    %br 
+    = f.text_field :url 
+  
+  %p
+    = f.label :visible 
+    %br 
+    = f.text_field :visible 
+  
+  %p
+    = f.label :info 
+    %br 
+    = f.text_area :info 
+  
+  %p
+    = f.submit 'Create' 
+  
 
-<%= link_to 'Back', admin_sponsors_path %>
+= link_to 'Back', admin_sponsors_path 
