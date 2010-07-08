@@ -5,3 +5,5 @@
 #   
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
+Sponsor.create(:name => "powermedia", :url => "http://powermedia.pl/", :image => "powermedia.png", :visible => true)
+Sponsor.create(:name => "naszaklasa", :url => "http://nasza-klasa.pl/", :image => "nk.png", :visible => true)
