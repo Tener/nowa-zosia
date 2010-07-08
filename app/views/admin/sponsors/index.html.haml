@@ -1,28 +1,33 @@
-<h1>Listing sponsors</h1>
+%h1Listing sponsors
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Image</th>
-    <th>Url</th>
-    <th>Visible</th>
-    <th>Info</th>
-  </tr>
+%table
+  %tr
+    %th Name
+    %th Image
+    %th Url
+    %th Visible
+    %th Info
+  
 
-<% @sponsors.each do |sponsor| %>
-  <tr>
-    <td><%=h sponsor.name %></td>
-    <td><%=h sponsor.image %></td>
-    <td><%=h sponsor.url %></td>
-    <td><%=h sponsor.visible %></td>
-    <td><%=h sponsor.info %></td>
-    <td><%= link_to 'Show', [:admin, sponsor] %></td>
-    <td><%= link_to 'Edit', edit_admin_sponsor_path(sponsor) %></td>
-    <td><%= link_to 'Destroy', [:admin, sponsor], :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+- @sponsors.each do |sponsor| 
+  %tr
+    %td
+      = h sponsor.name 
+    %td
+      = h sponsor.image 
+    %td
+      = h sponsor.url 
+    %td
+      = h sponsor.visible 
+    %td
+      = h sponsor.info 
+    %td
+      = link_to 'Show', [:admin, sponsor] 
+    %td
+      = link_to 'Edit', edit_admin_sponsor_path(sponsor) 
+    %td
+      = link_to 'Destroy', [:admin, sponsor], :confirm => 'Are you sure?', :method => :delete 
 
-<br />
+%br
 
-<%= link_to 'New sponsor', new_admin_sponsor_path %>
+= link_to 'New sponsor', new_admin_sponsor_path 
