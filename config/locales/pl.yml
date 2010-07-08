@@ -16,7 +16,7 @@ pl:
   name: "Nazwa"
   image: "Obrazek"
   url: "Adres URL"
-  visible: "Widoczny?"
+  visible: "Widoczny"
   info: "Informacje"
   yes: "Tak"
   no: "Nie"
