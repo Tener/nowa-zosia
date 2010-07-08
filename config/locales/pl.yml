@@ -3,6 +3,7 @@ pl:
   post_added: "Wpis dodany pomyślnie."
   post_updated: "Wpis uaktualniony pomyślnie."
   back: "Wróć"
+  show: "Pokaż"
   create: "Utwórz"
   save: "Zapisz"
   title: "Nagłówek"
