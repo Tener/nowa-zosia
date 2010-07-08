@@ -18,3 +18,5 @@ pl:
   url: "Adres URL"
   visible: "Widoczny?"
   info: "Informacje"
+  yes: "Tak"
+  no: "Nie"
