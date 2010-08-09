@@ -1,7 +1,11 @@
 class PostsController < ApplicationController
+  #invokes authorize private method defined below before each action (except index)
+  #then raises error when user has no rights  
+  before_filter :authorize, :except => :index
   # GET /posts
   # GET /posts.xml
-  def index
+  def index    
+    authorize! :read, Post
     @posts = Post.find(:all, :order => "created_at DESC")
 
   end
@@ -52,5 +56,11 @@ class PostsController < ApplicationController
 
       format.html { redirect_to(posts_url) }
 
+  end
+  
+  private
+  
+  def authorize
+    authorize! :manage, Post
   end
 end

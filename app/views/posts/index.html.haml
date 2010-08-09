@@ -5,7 +5,9 @@
       = h post.created_at.to_s
   .blog_post
     %p= post.content
-    %span= link_to t(:edit), edit_post_path(post)
-    %span= link_to t(:delete), post, :confirm => t(:are_you_sure), :method => :delete
-    %br
-= link_to t(:new_post), new_post_path
+    - if can? :manage, post
+      %span= link_to t(:edit), edit_post_path(post)
+      %span= link_to t(:delete), post, :confirm => t(:are_you_sure), :method => :delete
+    %br    
+- if can? :manage, Post
+  = link_to t(:new_post), new_post_path

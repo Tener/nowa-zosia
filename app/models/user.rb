@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   ROLES = %w[admin organiser speaker participant]
 
-  attr_accessible :email, :password, :password_confirmation
+  attr_accessible :email, :password, :password_confirmation, :role
   
   
 end
