@@ -3,3 +3,4 @@ haml
 polish
 warden
 devise --version 1.0.7
+cancan
