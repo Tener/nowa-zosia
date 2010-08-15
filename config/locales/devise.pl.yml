@@ -15,6 +15,7 @@ pl:
       link: 'Zapomniałeś hasła?'
       send_instructions: 'W ciągu kilku minut powinieneś otrzymać e-mail z informacją jak zresetować hasło.'
       updated: 'Twoje hasło zostało zmienione.'
+      send_button: "Wyślij e-mail z instrukcjami"
     confirmations:
       link: "Didn't receive confirmation instructions?"
       send_instructions: 'You will receive an email with instructions about how to confirm your account in a few minutes.'

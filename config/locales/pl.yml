@@ -25,3 +25,6 @@ pl:
   login: "Zaloguj"
   email: "e-mail"
   password: "hasło"
+  password_confirmation: "potwierdzenie hasła"
+  sign_in: "Zaloguj"
+  your_email: "Twój e-mail"
