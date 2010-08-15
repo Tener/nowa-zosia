@@ -22,3 +22,6 @@ pl:
   no: "Nie"
   yess: "Tak"
   nooo: "Nie"
+  login: "Zaloguj"
+  email: "e-mail"
+  password: "hasło"

@@ -13,15 +13,14 @@
         #page
           #header
             #topnav
-              %form#login_form{:action => "/login/", :method => "post"}
-                %fieldset
-                  %label{:for => "id_login_email"} e-mail
-                  %input#id_email{:name => "email", :type => "text"}/
-                  %label{:for => "id_login_password"} hasło
-                  %input#id_password{:name => "password", :type => "password"}/
-                  %input{:type => "submit", :value => "login"}/
+              - form_tag new_user_session_path, :id => "login_form" do
+                = label_tag :user_email, t(:email)
+                = text_field_tag :user_email
+                = label_tag :user_password, t(:password)
+                = password_field_tag :password
+                = submit_tag t(:login)
               .main_page_password_reset
-                %a{:href => "/password_reset"} zapomniałem hasła
+                = render :partial => "shared/devise_links"                
             %a{:href => "/blog/"}
               %img{:alt => "ZOSIA", :src => "/images/logo_zosi_shadow.png"}/
             %span Zimowy Obóz Studentów Informatyki A • Pokrzywna 2010

@@ -4,15 +4,15 @@ pl:
       link: 'Zaloguj'
       signed_in: 'Zalogowano pomyślnie.'
       signed_out: 'Wylogowano.'
-      unauthenticated: 'Musisz się zalogować aby móc kontynuowa.'
+      unauthenticated: 'Musisz się zalogować aby móc kontynuować.'
       unconfirmed: 'Twoje konto nie zostało jeszcze potwierdzone.'
       locked: 'Twoje konto jest zablokowane.'
-      invalid: 'Zły email lub hasło.'
+      invalid: 'Wpisano błędny adres e-mail lub hasło.'
       invalid_token: 'Hakerów zapraszamy gdzie indziej!'
       timeout: 'Sesja wygasła. Zaloguj sie ponownie.'
       inactive: 'Twoje konto nie zostało jeszcze aktywowane.'
     passwords:
-      link: 'Zapomniałeś hasło?'
+      link: 'Zapomniałeś hasła?'
       send_instructions: 'W ciągu kilku minut powinieneś otrzymać e-mail z informacją jak zresetować hasło.'
       updated: 'Twoje hasło zostało zmienione.'
     confirmations:
