@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :registerable, :database_authenticatable, :recoverable,
          :trackable, :validatable #, :rememberable
 
+  validates_presence_of :role
   ROLES = %w[admin organiser speaker participant]
 
   attr_accessible :email, :password, :password_confirmation, :role
