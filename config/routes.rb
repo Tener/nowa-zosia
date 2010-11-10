@@ -1,14 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
-
   map.namespace :admin do |admin|
+    admin.resources :sidebar_infos
     admin.resources :sponsors
   end
     
 
   map.devise_for :users
-  map.resources :posts, :except => [:show, :index]
+  map.resources :posts, :except => [:show]
   map.root :controller => :posts, :action => :index
-  map.posts "/blog", :controller => :posts, :action => :index
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
