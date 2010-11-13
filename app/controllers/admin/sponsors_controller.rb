@@ -1,4 +1,6 @@
 class Admin::SponsorsController < ApplicationController
+  before_filter :authorize
+  
   # GET /sponsors
   # GET /sponsors.xml
   def index
