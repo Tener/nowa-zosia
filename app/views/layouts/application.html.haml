@@ -49,38 +49,19 @@
             / begin: #col3 static column
             #col3
               #col3_content.clearfix
-                %h2 Informacje:
-                %h4 Miejsce
-                %p
-                  %a{:href => "http://www.hotel-chrobry.pl/pl/"} Kompleks hotelowy Chrobry
-                  w
-                  %a{:href => "http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=48-267+Pokrzywna,+Poland&sll=50.256864,17.697601&sspn=0.582116,1.41861&ie=UTF8&hq=&hnear=Pokrzywna,+Nysa+County,+Opole,+Poland&ll=50.283745,17.453327&spn=0.072724,0.242729&z=13&lci=com.panoramio.all,org.wikipedia.en"} Pokrzywnej
-                  (
-                  %a{:href => "http://pl.wikipedia.org/wiki/G\303\263ry_Opawskie"}> Góry&nbsp;Opawskie
-                  )
-                %p
-                  %h4 Planowane terminy
+                %h2
+                  Informacje:
+                  -#render :partial => "shared/sidebar_infos"
+                %h4 Planowane terminy
                 %ul{:style => "margin-left:0.2em"}
-                  %li
-                    zapisy i wpłaty
-                    %br>/
-                    do 21 lutego 2010, 23:59
-                  %li
-                    zgłaszanie wykładów
-                    %br>/
-                    do 1 marca 2010, 23:59
-                  %li
-                    zapisy na pokoje
-                    %br>/
-                    od 27 lutego 2010, 20:00
                   %li
                     wyjazd
                     %br>/
-                    4 marca 2010
+                    3 marca 2011
                   %li
                     powrót
                     %br>/
-                    7 marca 2010
+                    6 marca 2011
                 %h4 Kontakt
                 %p
                   %a{:href => "mailto:ksi@cs.uni.wroc.pl"} ksi@cs.uni.wroc.pl
@@ -90,17 +71,6 @@
                   %a{:href => "http://sites.google.com/a/cs.uni.wroc.pl/ksi/"}
                     %img{:alt => "Ko\305\202o Student\303\263w Informatyki", :src => "/images/ksi1.png", :title => "Ko\305\202o Student\303\263w Informatyki UWr"}/
                 %br/
-                %h4 Patronat
-                %p
-                  %ul
-                    %li
-                      %a{:href => "http://www.wmi.uni.wroc.pl/"} Wydział Matematyki i Informatyki Uniwersytetu Wrocławskiego
-                    %li
-                      %a{:href => "http://www.uni.wroc.pl/"} JM. Rektor Uniwersytetu Wrocławskiego
-                %h4 Sponsorzy
-                - Sponsor.visible.each do |sponsor|
-                  .sponsor_logo
-                    = link_to image_tag("sponsors/#{sponsor.image}", :alt => sponsor.name), sponsor.url
               #ie_clearing &nbsp;
               / End: IE Column Clearing
             / end: #col3
